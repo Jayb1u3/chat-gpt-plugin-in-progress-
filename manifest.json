@@ -1,0 +1,11 @@
+{
+  "id": "obsidian-chatgpt-plugin",
+  "name": "Chat GPT Plugin",
+  "version": "1.0.0",
+  "minAppVersion": "0.12.0",
+  "description": "Use the chat GPT model from the OpenAI API to generate responses to user input.",
+  "author": "John Doe",
+  "authorUrl": "https://example.com",
+  "isDesktopOnly": false,
+  "fundingUrl": "https://www.buymeacoffee.com/johndoe"
+}

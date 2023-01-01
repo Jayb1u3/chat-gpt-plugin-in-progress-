@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica; color: #1e1f25; -webkit-text-stroke: #1e1f25; background-color: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica; color: #1e1f25; -webkit-text-stroke: #1e1f25; background-color: #ffffff; min-height: 19.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica; color: #1e1f25; -webkit-text-stroke: #1e1f25; background-color: #bff2bd}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; background-color: #bff2bd}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!-- HTML for the chat window --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="chat-window"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="chat-header"&gt;Assistant Chat&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="chat-messages"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Chat bubbles go here --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;form class="chat-input"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;input type="text" placeholder="Enter a message..." id="chat-input"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button type="submit"&gt;Send&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/form&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- Button to toggle between light and dark mode --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="toggleLightDarkMode()"&gt;Toggle Light/Dark Mode&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- Link to the CSS file --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link rel="stylesheet" href="style.css"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- Link to the JavaScript file --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script src="script.js"&gt;&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- CSS styles for light and dark modes --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* Light mode styles */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.light-mode {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-window {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-color: #ccc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #f5f5f5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #333;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-bubble {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #333;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-bubble.user {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #eee;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-bubble.assistant {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #ddd;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-timestamp {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #999;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* Dark mode styles */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.dark-mode {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #333;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-window {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-color: #666;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #555;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-bubble {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #333;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-bubble.user {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #444;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-bubble.assistant {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #333;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-timestamp {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #999;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- JavaScript code to handle hotkey activation --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Bind the function to the "Ctrl+Shift+C" hotkey</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.addEventListener('keydown', (event) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if (event.ctrlKey &amp;&amp; event.shiftKey &amp;&amp; event.key === 'C') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Call the function when the hotkey is pressed</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>openChatWindow();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Function to open the chat window</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>function openChatWindow() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Code to open the chat window goes here</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span></span><span class="s2">&lt;!-- JavaScript code to toggle between light and dark mode --&gt; &lt;script&gt; // Function to toggle between light and dark mode function toggleLightDarkMode()</span><span class="s1"> { // Get the body element const body = document.querySelector('body'); // Toggle the "light-mode" and "dark-mode" classes body.classList.toggle('light-mode'); body.classList.toggle('dark-</span><span class="s2">mode'); }<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">&lt;/script&gt;</span></p>
+</body>
+</html>

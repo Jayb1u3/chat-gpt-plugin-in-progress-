@@ -1,0 +1,24 @@
+const openaiConfig = {
+  api_key: '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', // Replace with your API key
+  engine: 'chat-davinci-002', // Use the chat GPT model
+  temperature: 0.7, // Set the temperature to 0.7
+  prompt: '', // Leave the prompt empty
+  max_tokens: 200, // Set the maximum number of tokens to 200
+  frequency_penalty: 0.5, // Set the frequency penalty to 0.5
+};
+
+// Make an API request to the OpenAI API using the configuration object
+fetch('https://api.openai.com/v1/models/chat-davinci-002/generate', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${openaiConfig.api_key}`,
+  },
+  body: JSON.stringify(openaiConfig),
+})
+  .then((response) => response.json())
+  .then((response) => {
+    // Use the response from the API to generate a chat message
+    const chatMessage = response.choices[0].text;
+    console.log(chatMessage);
+  });
