@@ -7,10 +7,10 @@ This plugin allows you to chat with Assistant, a large language model developed 
 To install the plugin, follow these steps:
 
 Clone the repository to your local machine:
-git clone https://github.com/YOUR_USERNAME/obsidian-chat-assistant.git
+git clone https://github.com/Jayb1u3/obsidian-chat-assistant.git
 
 Copy code
-git clone https://github.com/YOUR_USERNAME/obsidian-chat-assistant.git
+git clone https://github.com/Jayb1u3/obsidian-chat-assistant.git
 
 Navigate to the plugin directory:
 cd obsidian-chat-assistant
@@ -20,6 +20,7 @@ npm install
 
 Copy code
 npm install
+
 Build the plugin:
 Copy code
 npm run build
