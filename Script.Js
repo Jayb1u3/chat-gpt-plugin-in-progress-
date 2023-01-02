@@ -2,7 +2,7 @@
 import openai from 'openai';
 
 // Set the API key
-openai.apiKey = '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';
+openai.apiKey = 'replace with your API key';
 
 // Initialize the chat GPT model
 const chatGPT = new openai.CompletionModel('text-davinci-002');
