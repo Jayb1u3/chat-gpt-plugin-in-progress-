@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "minAppVersion": "0.12.0",
   "description": "Use the chat GPT model from the OpenAI API to generate responses to user input.",
-  "author": "John Doe",
-  "authorUrl": "https://example.com",
+  "author": "Jayb1u3",
+  "authorUrl": "https://github.com/Jayb1u3/chat-gpt-plugin-in-progress-",
   "isDesktopOnly": false,
   "fundingUrl": "https://www.buymeacoffee.com/johndoe"
 }
